@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Quotes Added</h1>
+    <h2>Quote</h2>
   </div>
 </template>
 
