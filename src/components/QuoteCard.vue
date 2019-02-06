@@ -1,11 +1,15 @@
 <template>
   <div class="card">
-    <p class="quote">I'm a quote!</p>
+    <p class="quote">{{ quote }}</p>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    quote: String
+  }
+};
 </script>
 
 <style scoped>
