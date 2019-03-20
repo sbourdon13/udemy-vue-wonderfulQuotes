@@ -36,7 +36,7 @@ export default {
   name: "App",
   data() {
     return {
-      quotes: ["I'm a quote!", "me too!"]
+      quotes: ["Just some text to start with something!"]
     };
   },
   computed: {
@@ -67,6 +67,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

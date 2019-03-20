@@ -21,6 +21,6 @@ export default {
 
 .quote {
   font-family: Arizonia;
-  font-size: 18px;
+  font-size: 1.3rem;
 }
 </style>
