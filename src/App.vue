@@ -1,17 +1,27 @@
 <template>
   <div class="container">
     <app-header></app-header>
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        :style="progressBarStyle"
+        :aria-valuenow="progressBarWidth"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >{{ quotes.length }} / 10</div>
+    </div>
     <new-quote @quoteAdded="quoteAdded"></new-quote>
     <div class="row">
       <quote-card
         v-for="(quote, index) in quotes"
-        :key="quote"
-        :quote="quote.text"
-        class="col-md-4 col-lg-3 m-3"
+        :key="index"
+        :quote="quote"
+        class="col-md-4 col-xl-3 py-2"
         @click.native="deleteCard(index)"
       ></quote-card>
     </div>
-    <app-footer></app-footer>
+    <app-footer class="mt-2"></app-footer>
   </div>
 </template>
 
@@ -24,18 +34,23 @@ export default {
   name: "App",
   data() {
     return {
-      quotes: [{ id: 0, text: "I'm a quote!" }, { id: 1, text: "me too!" }],
-      newquote: ""
+      quotes: ["I'm a quote!", "me too!"]
+
+      // newquote: ""
     };
+  },
+  computed: {
+    progressBarWidth() {
+      return this.quotes.length * 10;
+    },
+    progressBarStyle() {
+      return { width: `${this.progressBarWidth}%` };
+    }
   },
   methods: {
     quoteAdded(newQuote) {
-      this.newquote = newQuote;
-      const id = this.quotes.length;
-      this.quotes.push({
-        id: id,
-        text: newQuote
-      });
+      // this.newquote = newQuote;
+      this.quotes.push(newQuote);
     },
     deleteCard(index) {
       this.quotes.splice(index, 1);

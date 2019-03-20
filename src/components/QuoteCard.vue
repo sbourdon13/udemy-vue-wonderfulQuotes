@@ -1,6 +1,8 @@
 <template>
-  <div class="card border rounded">
-    <p class="quote">{{ quote }}</p>
+  <div>
+    <div class="card border rounded p-3">
+      <div class="quote">{{ quote }}</div>
+    </div>
   </div>
 </template>
 
