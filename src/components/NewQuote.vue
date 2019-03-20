@@ -3,7 +3,7 @@
     <h2>Quote</h2>
     <textarea v-model="quote" @keyup.enter="addQuote" placeholder="Write a new quote..."></textarea>
     <br>
-    <button @click="addQuote">Add Quote</button>
+    <button class="btn btn-primary" @click="addQuote">Add Quote</button>
   </div>
 </template>
 

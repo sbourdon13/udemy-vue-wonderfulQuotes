@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card border rounded">
     <p class="quote">{{ quote }}</p>
   </div>
 </template>
@@ -13,9 +13,8 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.card:hover {
+  background-color: rgb(255, 217, 217);
 }
 
 .quote {
