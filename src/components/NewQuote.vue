@@ -4,7 +4,7 @@
     <textarea
       class="border rounded d-block col-12 p-2"
       v-model="quote"
-      @keyup.enter="addQuote"
+      @keypress.enter.prevent="addQuote"
       placeholder="Write a new quote..."
       rows="3"
     ></textarea>
@@ -23,8 +23,10 @@ export default {
   },
   methods: {
     addQuote() {
-      this.$emit("quoteAdded", this.quote);
-      this.quote = "";
+      if (this.quote) {
+        this.$emit("quoteAdded", this.quote);
+        this.quote = "";
+      }
     }
   }
 };
