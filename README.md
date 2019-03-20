@@ -6,17 +6,22 @@ The goal is to create a page where you can enter up to 10 quotes that you create
 
 This project uses Vue CLI 3 and Bootstrap.
 
+![Screenshot](./src/assets/screenshot.png)
+
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
