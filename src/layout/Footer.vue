@@ -1,5 +1,5 @@
 <template>
-  <div class="alert alert-primary">Info: Click on a Quote to delete it.</div>
+  <div class="alert alert-primary">Info: Click on a quote to delete it.</div>
 </template>
 
 <script>

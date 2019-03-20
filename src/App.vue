@@ -11,7 +11,9 @@
         aria-valuemax="100"
       >{{ quotes.length }} / 10</div>
     </div>
-    <new-quote @quoteAdded="quoteAdded"></new-quote>
+    <div class="row justify-content-center">
+      <new-quote class="col-md-6" @quoteAdded="quoteAdded"></new-quote>
+    </div>
     <div class="row">
       <quote-card
         v-for="(quote, index) in quotes"

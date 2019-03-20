@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <h2>Quote</h2>
-    <textarea v-model="quote" @keyup.enter="addQuote" placeholder="Write a new quote..."></textarea>
-    <br>
-    <button class="btn btn-primary" @click="addQuote">Add Quote</button>
+  <div class="my-3">
+    <h4>Quote</h4>
+    <textarea
+      class="border rounded d-block col-12 p-2"
+      v-model="quote"
+      @keyup.enter="addQuote"
+      placeholder="Write a new quote..."
+      rows="3"
+    ></textarea>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary mt-2" @click="addQuote">Add Quote</button>
+    </div>
   </div>
 </template>
 
