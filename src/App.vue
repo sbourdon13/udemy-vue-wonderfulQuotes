@@ -35,8 +35,6 @@ export default {
   data() {
     return {
       quotes: ["I'm a quote!", "me too!"]
-
-      // newquote: ""
     };
   },
   computed: {
@@ -49,8 +47,11 @@ export default {
   },
   methods: {
     quoteAdded(newQuote) {
-      // this.newquote = newQuote;
-      this.quotes.push(newQuote);
+      if (this.quotes.length < 10) {
+        this.quotes.push(newQuote);
+      } else {
+        alert("Too many quotes! Delete some before adding new ones.");
+      }
     },
     deleteCard(index) {
       this.quotes.splice(index, 1);
