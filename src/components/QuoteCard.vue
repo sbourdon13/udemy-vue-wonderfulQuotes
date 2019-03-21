@@ -1,18 +1,14 @@
 <template>
   <div>
     <div class="card p-3">
-      <div class="quote">{{ quote }}</div>
+      <div class="quote">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    quote: String
-  }
-};
-</script>
+<script></script>
 
 <style scoped>
 .card {

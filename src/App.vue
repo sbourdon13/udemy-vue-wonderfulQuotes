@@ -8,10 +8,9 @@
       <quote-card
         v-for="(quote, index) in quotes"
         :key="index"
-        :quote="quote"
         class="col-md-4 col-xl-3 py-2"
         @click.native="deleteCard(index)"
-      ></quote-card>
+      >{{ quote }}</quote-card>
     </div>
     <div class="mt-2 alert alert-primary">Info: Click on a quote to delete it.</div>
   </div>
